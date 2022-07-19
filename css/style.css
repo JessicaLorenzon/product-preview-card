@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-fraunces: 'Fraunces', sans-serif;
+
+    --primary-100: hsl(30, 38%, 92%);
+    --primary-200: hsl(158, 36%, 37%);
+    --primary-300: hsl(179, 100%, 13%);
+
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-200: hsl(228, 12%, 48%);
+    --neutral-300: hsl(212, 21%, 14%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.banner {
+    background-color: var(--neutral-100);
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    position: relative;
+    padding: 40px 40px 40px calc(300px + 30px);
+
+}
+
+.banner::before {
+    content: '';
+    width: 300px;
+    height: 450px;
+    background-image: url('../images/image-product-desktop.jpg');
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.banner__titulo {
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.banner__titulo,
+.banner__texto {
+    font-family: var(--font-family-montserrat);
+    color: var(--neutral-200);
+    font-size: 14px;
+    padding-bottom: 15px;
+    line-height: 25px;
+}
+
+.banner__subtitulo {
+    font-family: var(--font-family-fraunces);
+    font-size: 35px;
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+
+
+.precos {
+    list-style: none;
+    padding-bottom: 25px;
+
+}
+
+ul.precos {
+    display: inline-flex;
+}
+
+.preco1 {
+    font-family: var(--font-family-fraunces);
+    font-size: 30px;
+    color: var(--primary-200);
+    padding-right: 20px;
+}
+
+.preco2 {
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+    color: var(--neutral-200);
+    text-decoration: line-through;
+    padding-top: 8px;
+}
+
+.banner__button {
+    font-family: var(--font-family-montserrat);
+    background-color: var(--primary-200);
+    color: var(--neutral-100);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.banner__button .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-image: url(../images/icon-cart.svg);
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+
+.banner__button:hover {
+    transition: color .2s;
+    background-color: var(--primary-300);
+}
